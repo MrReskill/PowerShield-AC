@@ -7,7 +7,7 @@ use pocketmine\Server;
 use pocketmine\utils\TextFormat as T;
 
 class CheatManager {
-
+    
     private $cheat = [
         'Killaura' => true,
         'Fly' => true,

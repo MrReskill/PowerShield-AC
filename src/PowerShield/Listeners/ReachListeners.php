@@ -1,20 +1,24 @@
 <?php
-namespace PowerShield\Manager;
+namespace PowerShield\Listeners;
 
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
+use pocketmine\event\entity\{EntityDamageEvent,EntityDamageByEntityEvent};
 use PowerShield\Loader;
+use pocketmine\Player;
 use pocketmine\utils\TextFormat as T;
-use PowerShield\Listeners\{ReachListeners};
 use PowerShield\Manager\{ListenersManager, CommandsManager};
 
-class ListenersManager implements Listener {
+class ReachListeners implements Listeners {
     private $loader;
     public function __construct(Loader $loader)
     {
-       $this->loader = $loader;
-       $this->loader->getServer()->getPluginManager()->registerEvents(new ReachListeners($this->loader),$this->loader);
+        $this->loader = $loader;
+    }
+
+    public function onDamage(EntityDamageEvent $event) {
+
     }
 
 }

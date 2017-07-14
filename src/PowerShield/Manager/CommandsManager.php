@@ -10,8 +10,10 @@ use PowerShield\Manager\{ListenersManager, CommandsManager};
 
 class CommandsManager implements Listener {
 
+    private $loader;
     public function __construct(Loader $loader)
-    {
+    {   
+        $this->loader = $loader;
         //$this->getServer()->getCommandMap()->register("staff", new Commands\StaffCommands($this, "staff"));
     }
 
