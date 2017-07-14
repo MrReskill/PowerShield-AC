@@ -10,3 +10,4 @@
 - [x] Initialize repository.
 - [x] Main structure.
 - [x] Reach detection.
+- [x] FastFood detection.
