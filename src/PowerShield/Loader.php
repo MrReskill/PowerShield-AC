@@ -9,17 +9,18 @@ use PowerShield\Manager\{ListenersManager, CommandsManager};
 
 class Loader extends PLuginBase implements Listener {
 
+    
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         
         $this->getServer()->getPluginManager()->registerEvents(new ListenersManager($this), $this);
         $this->getServer()->getPluginManager()->registerEvents(new CommandsManager($this), $this);
 
-        $this->getLogger()->info(T::GREY.'['.T::AQUA.'PowerShield'.T::GREY.'] '.T::YELLOW.'The anticheat plugin are enabled');
+        $this->getLogger()->info(T::GRAY.'['.T::AQUA.'PowerShield'.T::GRAY.'] '.T::YELLOW.'The anticheat plugin are enabled');
     }
 
     public function onDisable() {
-        $this->getLogger()->info(T::GREY.'['.T::AQUA.'PowerShield'.T::GREY.'] '.T::YELLOW.'The anticheat plugin are disabled');
+        $this->getLogger()->info(T::GRAY.'['.T::AQUA.'PowerShield'.T::GRAY.'] '.T::YELLOW.'The anticheat plugin are disabled');
     }
 
 }
