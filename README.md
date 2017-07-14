@@ -4,5 +4,5 @@
 
 ### TO-DO:
 
-- [x] test
-- [ ] test
+- [x] Initialize repository
+- [ ] Main structure.
