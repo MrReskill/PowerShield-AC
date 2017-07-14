@@ -1,6 +1,6 @@
 name: PowerShield
 author: AlbanW
 description: http://twitter.com/AlbanWeill
-api: [3.0.0-APLHA6]
+api: 3.0.0-ALPHA6
 version: Github_not_tested_version
 main: PowerShield\Loader

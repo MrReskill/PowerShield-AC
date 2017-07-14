@@ -9,7 +9,7 @@ use PowerShield\Manager\{ListenersManager, CommandsManager};
 
 class Loader extends PLuginBase implements Listener {
 
-    
+    public $cheatLevel = [];
     public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         
@@ -17,6 +17,7 @@ class Loader extends PLuginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents(new CommandsManager($this), $this);
 
         $this->getLogger()->info(T::GRAY.'['.T::AQUA.'PowerShield'.T::GRAY.'] '.T::YELLOW.'The anticheat plugin are enabled');
+        $this->cheatlevel = [];
     }
 
     public function onDisable() {
