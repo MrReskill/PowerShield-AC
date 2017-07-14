@@ -22,7 +22,7 @@ class ReachListeners implements Listener {
             $damager = $e->getDamager();
             $damaged = $e->getEntity();
             if($damager instanceof Player && $damaged instanceof Player) {
-                if($damager->distance($damaged) > 3.2){
+                if($damager->distance($damaged) > 6){
                     $punish = new PunishManager('Reach', $damager->getName(), $this->loader);
                     $punish->warnStaff();                
                     return;
